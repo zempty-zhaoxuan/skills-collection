@@ -1,0 +1,10 @@
+{
+  "name": "leetcode",
+  "description": "LeetCode 算法题解助手插件，提供系统化、多角度的解题指导",
+  "version": "1.0.0",
+  "author": {
+    "name": "zempty-zhaoxuan"
+  },
+  "repository": "https://github.com/zempty-zhaoxuan/skills-collection",
+  "license": "MIT"
+}

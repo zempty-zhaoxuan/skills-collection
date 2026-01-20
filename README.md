@@ -10,7 +10,13 @@
 
 ## 使用方式
 
-将所需插件的技能文件（`.md`）添加到你的 Claude Code 配置中即可使用。
+```bash
+# 本地加载插件
+claude --plugin-dir ./leetcode
+
+# 或通过插件市场安装
+/plugin install leetcode@your-marketplace
+```
 
 ## 目录结构
 
@@ -18,8 +24,12 @@
 skills-collection/
 ├── README.md
 └── leetcode/
-    ├── README.md
-    └── leetcode-solver.md
+    ├── .claude-plugin/
+    │   └── plugin.json
+    ├── skills/
+    │   └── leetcode-solver/
+    │       └── SKILL.md
+    └── README.md
 ```
 
 ## 贡献

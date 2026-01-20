@@ -4,9 +4,10 @@
 
 ## 插件列表
 
-| 插件名称 | 描述 | 技能数量 |
-|---------|------|---------|
-| [leetcode](./leetcode/) | LeetCode 算法题解助手 | 1 |
+| 插件名称 | 描述 | 技能 | 命令 | 代理 | Hooks | 版本 |
+|---------|------|:----:|:----:|:----:|:-----:|------|
+| [leetcode](./leetcode/) | LeetCode 算法题解助手 | 1 | 0 | 0 | 0 | 1.0.0 |
+| [readme-update](./readme-update/) | README 文档自动更新助手 | 1 | 0 | 0 | 0 | 1.0.0 |
 
 ## 使用方式
 
@@ -23,7 +24,11 @@
 ### 安装插件
 
 ```bash
+# 安装 leetcode 插件
 /plugin install leetcode@skills-collection
+
+# 安装 readme-update 插件
+/plugin install readme-update@skills-collection
 ```
 
 ### 本地开发
@@ -31,6 +36,7 @@
 ```bash
 # 本地加载单个插件
 claude --plugin-dir ./leetcode
+claude --plugin-dir ./readme-update
 ```
 
 ## 目录结构
@@ -40,11 +46,18 @@ skills-collection/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── README.md
-└── leetcode/
+├── leetcode/
+│   ├── .claude-plugin/
+│   │   └── plugin.json
+│   ├── skills/
+│   │   └── leetcode-solver/
+│   │       └── SKILL.md
+│   └── README.md
+└── readme-update/
     ├── .claude-plugin/
     │   └── plugin.json
     ├── skills/
-    │   └── leetcode-solver/
+    │   └── readme-update/
     │       └── SKILL.md
     └── README.md
 ```

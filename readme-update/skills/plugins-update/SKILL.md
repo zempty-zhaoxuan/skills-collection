@@ -1,20 +1,22 @@
 ---
-name: readme-update
-description: README 文档自动更新助手。当用户需要更新插件市场文档、同步插件信息、生成插件统计表格时触发。自动检测插件变更，更新根目录和各插件的 README 文档。
+name: plugins-update
+description: skills-collection 插件市场文档更新助手。专用于更新 zempty-zhaoxuan/skills-collection 仓库的 README 文档。当用户需要同步插件信息、生成插件统计表格、更新文档时触发。
 ---
 
-# README 文档更新助手
+# Plugins Update
 
-自动检测插件市场变更，生成和更新规范的 README 文档。
+专用于 **zempty-zhaoxuan/skills-collection** 插件市场的文档更新助手。
+
+> **适用范围**：仅用于更新当前仓库（skills-collection）下的 README 文件，不适用于其他项目。
 
 ## 工作流程
 
 ### 1. 扫描插件目录
 
-遍历插件市场根目录，检测所有插件：
+遍历 skills-collection 仓库根目录，检测所有插件：
 
 ```
-扫描目标：
+skills-collection/
 ├── .claude-plugin/marketplace.json  # 市场配置
 └── */                               # 各插件目录
     ├── .claude-plugin/plugin.json   # 插件配置
@@ -40,7 +42,7 @@ description: README 文档自动更新助手。当用户需要更新插件市场
 
 ### 3. 更新根目录 README
 
-生成插件市场总览文档，包含：
+更新 `skills-collection/README.md`，生成：
 
 **插件统计表格**：
 
@@ -49,21 +51,20 @@ description: README 文档自动更新助手。当用户需要更新插件市场
 
 | 插件名称 | 描述 | 技能 | 命令 | 代理 | Hooks | 版本 |
 |---------|------|------|------|------|-------|------|
-| [插件A](./插件A/) | 描述... | 2 | 1 | 0 | 0 | 1.0.0 |
-| [插件B](./插件B/) | 描述... | 1 | 0 | 1 | 1 | 1.0.0 |
+| [leetcode](./leetcode/) | LeetCode 算法题解助手 | 1 | 0 | 0 | 0 | 1.0.0 |
+| [readme-update](./readme-update/) | 文档更新助手 | 1 | 0 | 0 | 0 | 1.0.0 |
 ```
 
 **使用说明**：
-- 添加市场源的命令
-- 安装插件的命令
-- 本地开发说明
+- 添加市场源：`/plugin marketplace add zempty-zhaoxuan/skills-collection`
+- 安装插件：`/plugin install 插件名@skills-collection`
 
 **目录结构**：
-- 完整的目录树展示
+- 完整的仓库目录树
 
 ### 4. 更新插件 README
 
-为每个插件生成或更新 README.md，包含：
+为 skills-collection 中的每个插件更新 README.md：
 
 **基本信息**：
 
@@ -74,7 +75,7 @@ description: README 文档自动更新助手。当用户需要更新插件市场
 
 ## 安装
 
-/plugin install 插件名@市场名
+/plugin install 插件名@skills-collection
 
 ## 功能列表
 
@@ -83,50 +84,32 @@ description: README 文档自动更新助手。当用户需要更新插件市场
 | 技能名称 | 描述 | 触发方式 |
 |---------|------|---------|
 | skill-name | 描述... | 关键词/命令 |
-
-### 命令 (Commands)
-
-| 命令 | 描述 |
-|------|------|
-| /plugin:command | 描述... |
-
-### 子代理 (Agents)
-
-| 代理名称 | 描述 |
-|---------|------|
-| agent-name | 描述... |
-
-### Hooks
-
-| 事件 | 匹配器 | 动作 |
-|------|-------|------|
-| PostToolUse | Write | 命令... |
 ```
 
 **详细使用说明**：
-- 每个技能的详细用法
-- 示例输入输出
+- 每个技能的用法和示例
+- 输入输出说明
 - 注意事项
 
 ## 输出规范
 
-### 文件编码
-- UTF-8 编码
-- LF 换行符
+### 文件路径
+- 根目录 README：`skills-collection/README.md`
+- 插件 README：`skills-collection/插件名/README.md`
 
 ### Markdown 格式
-- 使用标准 GitHub Flavored Markdown
+- UTF-8 编码，LF 换行符
+- GitHub Flavored Markdown
 - 表格对齐、代码块标注语言
-- 适当使用标题层级（h1-h4）
 
 ### 更新策略
-- 保留用户自定义内容（通过标记注释）
+- 保留用户自定义内容
 - 仅更新自动生成的统计部分
 - 新增插件自动追加到列表
 
 ## 触发方式
 
-- `更新 README`
-- `同步文档`
+- `更新插件文档`
+- `同步 README`
 - `生成插件统计`
-- `更新插件市场文档`
+- `更新 skills-collection 文档`

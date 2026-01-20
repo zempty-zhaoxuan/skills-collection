@@ -37,7 +37,8 @@ claude --plugin-dir ./leetcode
 
 ```
 skills-collection/
-├── marketplace.json
+├── .claude-plugin/
+│   └── marketplace.json
 ├── README.md
 └── leetcode/
     ├── .claude-plugin/

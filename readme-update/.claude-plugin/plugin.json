@@ -1,0 +1,9 @@
+{
+  "name": "readme-update",
+  "description": "README 文档自动更新助手，检测插件变更并生成规范的文档",
+  "version": "1.0.0",
+  "author": {
+    "name": "zempty-zhaoxuan"
+  },
+  "license": "MIT"
+}

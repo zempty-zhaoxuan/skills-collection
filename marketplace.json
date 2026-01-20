@@ -1,0 +1,24 @@
+{
+  "name": "skills-collection",
+  "owner": {
+    "name": "zempty-zhaoxuan"
+  },
+  "metadata": {
+    "description": "个人插件市场，收录和总结好用的 Claude Code 技能插件集合",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "leetcode",
+      "source": "./leetcode",
+      "description": "LeetCode 算法题解助手插件，提供系统化、多角度的解题指导",
+      "version": "1.0.0",
+      "author": {
+        "name": "zempty-zhaoxuan"
+      },
+      "license": "MIT",
+      "keywords": ["leetcode", "algorithm", "java", "interview"],
+      "category": "development"
+    }
+  ]
+}

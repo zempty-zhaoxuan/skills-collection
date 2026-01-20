@@ -10,18 +10,34 @@
 
 ## 使用方式
 
-```bash
-# 本地加载插件
-claude --plugin-dir ./leetcode
+### 添加市场源
 
-# 或通过插件市场安装
-/plugin install leetcode@your-marketplace
+```bash
+# 通过 GitHub 添加
+/plugin marketplace add zempty-zhaoxuan/skills-collection
+
+# 或通过 Git URL 添加
+/plugin marketplace add https://github.com/zempty-zhaoxuan/skills-collection.git
+```
+
+### 安装插件
+
+```bash
+/plugin install leetcode@skills-collection
+```
+
+### 本地开发
+
+```bash
+# 本地加载单个插件
+claude --plugin-dir ./leetcode
 ```
 
 ## 目录结构
 
 ```
 skills-collection/
+├── marketplace.json
 ├── README.md
 └── leetcode/
     ├── .claude-plugin/
